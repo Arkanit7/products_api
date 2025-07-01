@@ -37,6 +37,7 @@ const delayMiddleware = (req, res, next) => {
 app.use(cors())
 app.use(json())
 app.use(delayMiddleware)
+app.use(express.static('public')) //make the folder public, which meens it can be accsessed like a file explorer from browser
 
 // Ініціалізація JSON-файлу
 async function initializeProductsFile() {
